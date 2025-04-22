@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adalyn R Dugas - Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Reset + Global Styles */
+    body {
+      font-family: 'Poiret One', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF3E0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-weight: bold;
+    }
+
+    a.nav-link {
+      color: #FAFAFA !important;
+      font-weight: bold;
+    }
+
+    a.nav-link:hover {
+      color: #FFA726 !important;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #FF6F00;
+      padding: 15px 0;
+    }
+
+    /* NAME SECTION WITH BACKGROUND IMAGE */
+    .name-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('images/portrait-background.jpg'); /* Update this path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .name-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .name-section h1,
+    .name-section p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .name-section h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .name-section p {
+      font-size: 1.25rem;
+      color: #FFA726;
+    }
+
+    /* Navigation Styles */
+    .nav-item .nav-link {
+      margin: 0 15px; /* Add space between the navigation links */
+    }
+
+    .nav-item .nav-link.active {
+      background-color: #FFA726; /* Highlight active link */
+    }
+
+    /* QUOTE */
+    .quote-section {
+      background-color: #FFE0B2;
+      padding: 40px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .quote-section blockquote {
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+
+    .quote-section footer {
+      color: #FF6F00;
+      margin-top: 10px;
+    }
+
+    /* PAINTING GRID */
+    .painting img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .painting img:hover {
+      transform: scale(1.05);
+      border: 3px solid #FFA726;
+    }
+
+    /* BIO */
+    .bio-section {
+      padding: 60px 20px;
+    }
+
+    .portrait-photo img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portrait-photo img:hover {
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #FF6F00;
+      color: #FAFAFA;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="professional.html">Professional Work</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Name Section with Background Image -->
+  <section class="name-section" style="background-image: url('Images/ocala.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); z-index: 1;"></div>
+    <h1 style="position: relative; z-index: 2;">Adalyn R Dugas</h1>
+    <p style="position: relative; z-index: 2; color: #FFA726;">Writer, Painter, & Information Designer</p>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <blockquote class="blockquote">
+      <p>"Great Art Picks Up Where Nature Ends" - Marc Chagall&nbsp; &nbsp;&nbsp;</p>
+    </blockquote>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container painting text-center my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="painting1.jpg" alt="Painting 1" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="painting2.jpg" alt="Painting 2" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="painting3.jpg" alt="Painting 3" class="img-fluid">
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="bio-section container">
+    <div class="row align-items-center">
+      <div class="col-md-4 portrait-photo text-center">
+        <img src="Images/orangedress.jpg" alt="Portrait of Adalyn R Dugas" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h2>About Me</h2>
+        <p> My name is Adalyn Dugas. I am a professional writer and designer from Fairhope, Alabama. In 2024, I received my BA in English from the University of South Alabama. Currently, I am working on receiving my master's degree from Auburn University in Technical Communication. My website serves to showcase industry relevant experince while also creating space to display my work in the visual arts community.&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-4 text-center">
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out via email at 
+      <a href="mailto:adalynrdugas@gmail.com">adalynrdugas@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 10px 0; font-size: 0.9rem;">
+    <p>&copy; 2025 Adalyn R Dugas. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
